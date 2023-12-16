@@ -102,9 +102,9 @@ npm run build:mp-weixin  # 打包微信小程序项目
 - ✈️ utils/assets/remoteAssetsURL.ts 远程资源 URL 工具文件，支持远程资源 URL
 - 🎨 uni.scss 集成了 uniapp 的全局 scss 样式文件，支持全局样式
 - 🔐 main.js 中使用依赖注入全局使用（正常情况是使用的页面需要 import {inject} form vue, 但是使用了 unplugin-auto-import/vite 不要手动引入，直接在页面使用。
-  > app.provide('$useModal', useModal)
-  app.provide('$useToast', useToast)
-  > app.provide('$useLoading', useLoading)
+  > - app.provide('$useModal', useModal)
+  > - app.provide('$useToast', useToast)
+  > - app.provide('$useLoading', useLoading)
 - 🔍 vite.config.ts
   > 1. 集成了 ViteAutoImport 自动导入模块，减少手动导入的工作
   > 2. unplugin-vue-components/vite components 目录下自动导入（其他需求自行配置）
