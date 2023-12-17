@@ -1,4 +1,4 @@
-import { getFileBaseURL } from '*****'
+import useHost from '@/config/env.host.ts'
 
 /**
  * 为远程资源构建 URL 地址。
@@ -8,7 +8,7 @@ import { getFileBaseURL } from '*****'
  * @returns 远程资源的 URL 地址。
  */
 function useRemoteURL(remotePath: string, { avoidCache = false }: { avoidCache?: boolean } = {}) {
-  let resourceURL: string = `${getFileBaseURL()}/assets${remotePath}`
+  let resourceURL: string = `${useHost}/assets${remotePath}`
 
   if (avoidCache) {
     // 时间戳来防止浏览器缓存,每次请求资源时都获得最新版本的资源。
